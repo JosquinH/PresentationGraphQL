@@ -1,0 +1,24 @@
+{
+  "name": "presentation_graphql",
+  "version": "1.0.0",
+  "description": "Présentation du langage de requête GraphQL",
+  "main": "index.js",
+  "scripts": {
+    "Demo1": "npm Demo1/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JosquinH/PresentationGraphQL.git"
+  },
+  "author": "JosquinH",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JosquinH/PresentationGraphQL/issues"
+  },
+  "homepage": "https://github.com/JosquinH/PresentationGraphQL#readme",
+  "dependencies": {
+    "apollo-server-express": "^3.13.0",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2"
+  }
+}
