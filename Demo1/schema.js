@@ -1,3 +1,5 @@
+const fs = require('fs')
+
 const typeDefs = `#graphql
   type Query {
     test: String
@@ -5,7 +7,10 @@ const typeDefs = `#graphql
 `
 const resolvers = {
     Query: {
-      test: () => 'Hello World !',
+      test: async (_1,_2,{data}) => {
+        console.log(data)
+        return 'Hello World !'
+      }
     },
 }
 
