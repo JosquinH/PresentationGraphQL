@@ -1,15 +1,21 @@
-const fs = require('fs')
+const { gql } = require('apollo-server')
 
-const typeDefs = `#graphql
-  type Query {
-    test: String
+const typeDefs = gql`
+  type Musee {
+    id : String!
+    nom : String!
   }
-`
+
+  type Query {
+    getMusee : [Musee!]
+  }
+`;
+
+module.exports = typeDefs;
 const resolvers = {
     Query: {
-      test: async (_1,_2,{data}) => {
-        console.log(data)
-        return 'Hello World !'
+      getMusee: (_1,_2,{data}) => {
+        return [data[1],data[2]]
       }
     },
 }

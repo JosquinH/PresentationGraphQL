@@ -11,7 +11,9 @@ const fs = require('fs')
     const server = new ApolloServer({
         typeDefs,
         resolvers,
-        playground: 'true',
+        tracing: true,
+        cacheControl: true,
+        playground: true,
         context: (...params) => {
             return {...params, data : JSON.parse(data)}
         }
