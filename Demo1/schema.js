@@ -7,14 +7,17 @@ const typeDefs = gql`
   }
 
   type Query {
-    getMusee : [Musee!]
+    getMusee(id: String!) : Musee! 
+    getMusees : [Musee!]
   }
-`;
+`
 
-module.exports = typeDefs;
 const resolvers = {
     Query: {
-      getMusee: (_1,_2,{data}) => {
+      getMusee: (_1,{id},{data}) => {
+        return data.find(x => x.id === id)
+      },
+      getMusees: (_1,_2,{data}) => {
         return [data[1],data[2]]
       }
     },
