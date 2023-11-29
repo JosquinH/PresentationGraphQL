@@ -22,17 +22,14 @@ const fs = require('fs')
     server.applyMiddleware({ app });
 
     app.use((req, res) => {
-        res.status(200);
-        res.send('Hello!');
-        res.end();
+        res.status(200)
+        res.send('Hello!')
+        res.end()
     });
 
-    await app.listen(process.env.PORT, () => {
-        console.log(`🚀 Server ready running at http://localhost:${process.env.PORT}  `)
-        console.log(`🚀 Playground ready running at http://localhost:${process.env.PORT}/graphql  `)
-    })
-
-    return { server, app };
+    return app
 }
 
-module.exports = {getApolloServer}
+module.exports = {
+    getApolloServer
+}
