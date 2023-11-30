@@ -1,12 +1,11 @@
 const express = require('express')
 const { ApolloServer } = require('apollo-server-express')
 const { typeDefs, resolvers } = require('./schema')
-const fs = require('fs')
 
  getApolloServer = async () => {
     const app = express()
     
-    const data = await fs.readFileSync('Data/Musee.json', 'utf8')
+    const data = []
 
     const server = new ApolloServer({
         typeDefs,
@@ -15,7 +14,7 @@ const fs = require('fs')
         cacheControl: true,
         playground: true,
         context: (...params) => {
-            return {...params, data : JSON.parse(data)}
+            return {...params, data : data}
         }
     })
     

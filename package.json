@@ -4,8 +4,7 @@
   "description": "Présentation du langage de requête GraphQL",
   "main": "index.js",
   "scripts": {
-    "Demo1": "npm Demo1/index.js",
-    "Demo2": "npm Demo2/index.js"
+    "Demo1": "npm Demo1/index.js"
   },
   "repository": {
     "type": "git",
