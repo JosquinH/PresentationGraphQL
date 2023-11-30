@@ -10,9 +10,7 @@ const removeElementFromArray = (array,id,comp) => {
         element = array.pop()
     }
 
-    while (stack.length !== 0) {
-        array.push(stack.pop())
-    }
+    array.push(...stack)
 }
 
 module.exports = {removeElementFromArray, compareId}
