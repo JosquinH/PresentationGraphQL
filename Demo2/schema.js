@@ -1,4 +1,5 @@
 const { gql } = require('apollo-server')
+const {removeElementFromArray, compareId} = require('./utils')
 
 const typeDefs = gql`
   type Musee {
@@ -55,8 +56,10 @@ const resolvers = {
         }
         return musee
       },
-      deleteMusee: (root,{id}, ctx) => {
-        ctx.data = ctx.data.filter(x => x.id === id)
+      deleteMusee: (root,{id}, ctx) => { 
+        if (ctx.data.findIndex(x => x.id === id) !== -1) {
+          removeElementFromArray(ctx.data,id,compareId)
+        }
         return id
       }
     }
