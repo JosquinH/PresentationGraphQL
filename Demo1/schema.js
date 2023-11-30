@@ -14,11 +14,12 @@ const typeDefs = gql`
 
 const resolvers = {
     Query: {
-      getMusee: (_1,{id},{data}) => {
-        return data.find(x => x.id === id)
+      getMusee: (root,{id},ctx) => {
+        const res = ctx.data.find(x => x.id === id)
+        return res
       },
-      getMusees: (_1,_2,{data}) => {
-        return [data[1],data[2]]
+      getMusees: (root,{},ctx) => {
+        return [ctx.data[1],ctx.data[2]]
       }
     },
 }
