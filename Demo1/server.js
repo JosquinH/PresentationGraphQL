@@ -10,8 +10,6 @@ const { typeDefs, resolvers } = require('./schema')
     const server = new ApolloServer({
         typeDefs,
         resolvers,
-        tracing: true,
-        cacheControl: true,
         playground: true,
         context: (...params) => {
             return {...params, data : data}
