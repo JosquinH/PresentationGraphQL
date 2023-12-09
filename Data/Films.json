@@ -1,0 +1,116 @@
+[
+	{
+		"id": "f0317c15-1d21-466e-9bb4-10255bc5fc53",
+		"title": "Le Garçon et le Héron",
+		"director": {
+			"id": "69aaf99a-f2ae-4d69-a780-782d51133795",
+			"name": "Miyazaki",
+			"firstname": "Hayao",
+			"birthDate": "1941-01-05",
+			"sex": "MAN"
+		},
+		"year": 2023,
+		"releaseInFrance": true
+	},
+	{
+		"id": "5fdbc09b-f61b-4bb9-834c-744f5dd6bac0",
+		"title": "Oppenheimer",
+		"director": {
+			"id": "c5bc4ca5-8e4d-4d8b-bf54-cad968b211e7",
+			"name": "Nolan",
+			"firstname": "Christopher",
+			"birthDate": "1970-07-30",
+			"sex": "MAN"
+		},
+		"year": 2023,
+		"releaseInFrance": true,
+		"actors": [
+			{
+				"id": "067026c7-d609-4b39-9dfb-d3438fcfdb24",
+				"name": "Murphy",
+				"firstname": "Cillian",
+				"birthDate": "1976-05-25",
+				"sex": "MAN"
+			},
+			{
+				"id": "48522148-e859-4f9d-91c7-aaa7fc1204d3",
+				"name": "Blunt",
+				"firstname": "Emily",
+				"birthDate": "1983-02-23",
+				"sex": "WOMAN"
+			}
+		]
+	},
+	{
+		"id": "48522148-e859-4f9d-91c7-aaa7fc1204d3",
+		"title": "Babylon",
+		"director": {
+			"id": "94d044ba-d3c1-492d-82a3-3dc74d99d6b6",
+			"name": "Chazelle",
+			"firstname": "Damien",
+			"birthDate": "1985-01-19",
+			"sex": "MAN"
+		},
+		"year": 2022,
+		"releaseInFrance": true,
+		"actors": [
+			{
+				"id": "194c62a5-ba53-4bcd-8ec6-ebe7388a3879",
+				"name": "Robbie",
+				"firstname": "Margot",
+				"birthDate": "1990-07-02",
+				"sex": "WOMAN"
+			},
+			{
+				"id": "32ae18f0-14c8-4d89-8aba-e2bb4859b5a2",
+				"name": "Pitt",
+				"firstname": "Brad",
+				"birthDate": "1963-12-18",
+				"sex": "MAN"
+			},
+			{
+				"id": "e05e369e-0d4b-4999-b0d9-a43ccef8932f",
+				"name": "Calva",
+				"firstname": "Diego",
+				"birthDate": "1992-03-16",
+				"sex": "MAN"
+			}
+		]
+	},
+	{
+		"id": "fcd74cb4-d5da-4d05-a99f-0f3c364bec8d",
+		"title": "Bonne conduite",
+		"director": {
+			"id": "1f5f5efd-93ec-4286-ad66-c1fc806d26a3",
+			"name": "Barré",
+			"firstname": "Jonathan",
+			"birthDate": "1983-01-01",
+			"sex": "MAN"
+		},
+		"year": 2023,
+		"releaseInFrance": true,
+		"actors": [
+			{
+				"id": "134cf6b1-fbd7-4b05-9bcd-e7459fe9905b",
+				"name": "Calamy",
+				"firstname": "Laure",
+				"birthDate": "1975-06-06",
+				"sex": "WOMAN"
+			},
+			{
+				"id": "4db5465d-6e36-43f2-aafb-9705b5965a78",
+				"name": "Marsais",
+				"firstname": "David",
+				"birthDate": "1984-04-04",
+				"sex": "MAN"
+			},
+			{
+				"id": "88f4d4c4-7dd5-401e-829c-c3c870910284",
+				"name": "Ludig",
+				"firstname": "Grégoire",
+				"birthDate": "1982-08-11",
+				"sex": "MAN"
+			}
+		]
+	}
+]

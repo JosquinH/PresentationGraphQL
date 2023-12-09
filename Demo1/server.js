@@ -1,18 +1,20 @@
 const express = require('express')
 const { ApolloServer } = require('apollo-server-express')
 const { typeDefs, resolvers } = require('./schema')
+const fs = require('fs')
 
- getApolloServer = async () => {
+const data = fs.readFileSync('Data/Films.json', 'utf8')
+
+const getApolloServer = async () => {
     const app = express()
-    
-    const data = []
-
     const server = new ApolloServer({
         typeDefs,
         resolvers,
         playground: true,
+        tracing: true,
+        cacheControl: true,
         context: (...params) => {
-            return {...params, data : data}
+            return {...params, data : JSON.parse(data)}
         }
     })
     
