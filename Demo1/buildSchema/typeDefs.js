@@ -18,12 +18,6 @@ const typeDefs = gql`
     sex : Sex!
   }
 
-  enum Sex {
-    MAN
-    WOMAN
-    NEUTRAL
-  }
-
   input CreateMovieInput {
     title : String!
     director : CreateHumanInput!
@@ -32,11 +26,31 @@ const typeDefs = gql`
     actors: [CreateHumanInput!]
   }
 
+  input UpdateMovieInput {
+    title: String
+    director: UpdateHumanInput
+    year: Int
+    releaseInFrance: Boolean
+  }
+
   input CreateHumanInput {
-    name : String!
-    firstname : String!
-    birthDate : String!
-    sex : Sex!
+    name: String!
+    firstname: String!
+    birthDate: String!
+    sex: Sex!
+  }
+
+  input UpdateHumanInput {
+    name: String
+    firstname: String
+    birthDate: String
+    sex: Sex
+  }
+
+  enum Sex {
+    MAN
+    WOMAN
+    NEUTRAL
   }
 
   type Query {
@@ -45,7 +59,9 @@ const typeDefs = gql`
   }
 
   type Mutation {
-    createMovie(input:CreateMovieInput!) : Movie!
+    createMovie(input:CreateMovieInput!): Movie!
+    updateMovie(id: ID!, input:UpdateMovieInput!): Movie!
+    deleteMovie(id: ID!) : Movie!
   }
 `
 
