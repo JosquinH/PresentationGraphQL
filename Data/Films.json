@@ -38,6 +38,13 @@
                 "firstname": "Emily",
                 "birthDate": "1983-02-23",
                 "sex": "WOMAN"
+            },
+            {
+                "name": "Downey Jr",
+                "firstname": "Robert",
+                "birthDate": "1974-05-21",
+                "sex": "MAN",
+                "id": "d515405d-d50b-4fd0-a970-011399971a23"
             }
         ]
     },
@@ -82,12 +89,12 @@
         "title": "Bonne conduite",
         "director": {
             "id": "1f5f5efd-93ec-4286-ad66-c1fc806d26a3",
-            "name": "Barré",
-            "firstname": "Jonathan",
+            "name": "Cameron",
+            "firstname": "James",
             "birthDate": "1983-01-01",
             "sex": "MAN"
         },
-        "year": 2023,
+        "year": 1995,
         "releaseInFrance": true,
         "actors": [
             {

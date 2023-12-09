@@ -62,6 +62,9 @@ const typeDefs = gql`
     createMovie(input:CreateMovieInput!): Movie!
     updateMovie(id: ID!, input:UpdateMovieInput!): Movie!
     deleteMovie(id: ID!) : Movie!
+    addActorToMovie(movieId: ID!, actorInput: CreateHumanInput!) : Movie!
+    updateActorFromMovie(movieId: ID!, actorId: ID!, actorInput: UpdateHumanInput!) : Movie!
+    deleteActorFromMovie(movieId: ID!, actorId: ID!) : Movie!
   }
 `
 
