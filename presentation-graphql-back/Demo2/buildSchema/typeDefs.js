@@ -1,10 +1,11 @@
 const { gql } = require('apollo-server')
 
 const typeDefs = gql`
-  type Messages {
+  type Message {
     id : ID!
     senderId : ID!
     recipientId : ID!
+    date: String!
     body : String!
   }
 
@@ -13,8 +14,25 @@ const typeDefs = gql`
     pseudo : String!
   }
 
+  input CreateUserInput {
+    pseudo : String!
+  }
+
+  input CreateMessageInput {
+    senderId : ID!
+    recipientId : ID!
+    date: String!
+    body : String!
+  }
+
   type Query {
     getUsers: [User!]!
+    getMessages : [Message!]!
+  }
+
+  type Mutation {
+    createUser(input: CreateUserInput!) : User!
+    createMessage(input: CreateMessageInput!) : Message!
   }
 
 `

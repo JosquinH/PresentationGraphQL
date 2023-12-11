@@ -11,7 +11,7 @@ const getApolloServer = async () => {
         tracing: true,
         cacheControl: true,
         context: (...params) => {
-            return {...params, filename : 'Data/Utilisateurs.json'}
+            return {...params, userFilename : 'Data/Utilisateurs.json', messageFilename : 'Data/Message.json'}
         }
     })
     
