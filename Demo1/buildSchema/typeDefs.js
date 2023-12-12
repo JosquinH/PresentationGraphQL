@@ -66,6 +66,70 @@ const typeDefs = gql`
     updateActorFromMovie(movieId: ID!, actorId: ID!, actorInput: UpdateHumanInput!) : Movie!
     deleteActorFromMovie(movieId: ID!, actorId: ID!) : Movie!
   }
+
+  enum Brand {
+    TOYOTA
+    SUZUKI
+    NISSAN
+    HONDA
+  }
+
+  type Car {
+    id : ID!
+    model : String!
+    brand : Brand!
+    year : Int!
+    price : Float!
+    manual : Boolean!
+  }
+
+  type PersonalCar {
+    numberplate : ID!
+    car : Car!
+  }
+
+  type Garage {
+    id : ID!
+    personalCars : [PersonalCar!]!
+  }
+
+  input CreateCarInput {
+    model : String!
+    brand : Brand!
+    year : Int!
+    price : Float!
+    manual : Boolean!
+  }
+
+  input UpdateCarInput {
+    model : String
+    brand : Brand
+    year : Int
+    price : Float
+    manual : Boolean
+  }
+
+  input CarFilterInput {
+    model : String
+    brand : Brand
+    year : Int
+    price : Float
+    manual : Boolean
+  }
+
+  type Query {
+    getCars(filter:CarFilterInput) : [Car!]!
+    getGarage(id: ID!) : Garage
+  }
+
+  type Mutation {
+    createCar(input: CreateCarInput!) : Car!
+    updateCar(id: ID! input: UpdateCarInput!) : Car!
+    deleteGarage(id: ID!) : Garage
+  }
+
+
+
 `
 
 module.exports= {typeDefs}
