@@ -1,0 +1,34 @@
+[
+    {
+        "model": "Swift",
+        "brand": "SUZUKI",
+        "year": 2021,
+        "price": 18000,
+        "manual": true,
+        "id": "a6a6214a-2734-49b2-935f-b6a71e36bf44"
+    },
+    {
+        "model": "Swift",
+        "brand": "SUZUKI",
+        "year": 2019,
+        "price": 15000,
+        "manual": false,
+        "id": "b897b09f-ab99-4adc-b0b1-48199d31a035"
+    },
+    {
+        "model": "Vitara",
+        "brand": "SUZUKI",
+        "year": 2023,
+        "price": 25000,
+        "manual": true,
+        "id": "6c7f6275-e3ed-4988-906e-e47217ce5fd2"
+    },
+    {
+        "model": "AE86 Trueno",
+        "brand": "TOYOTA",
+        "year": 1983,
+        "price": 30000,
+        "manual": true,
+        "id": "f251146a-e711-4b20-bb1a-f463a9fbb153"
+    }
+]

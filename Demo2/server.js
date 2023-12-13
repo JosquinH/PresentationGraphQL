@@ -1,17 +1,16 @@
 const express = require('express')
 const { ApolloServer } = require('apollo-server-express')
-const { typeDefs, resolvers } = require('./schema')
+const schema = require('./buildSchema').nexusSchema
 
 const getApolloServer = async () => {
     const app = express()
     const server = new ApolloServer({
-        typeDefs,
-        resolvers,
+        schema,
         playground: true,
         tracing: true,
         cacheControl: true,
         context: (...params) => {
-            return {...params, userFilename : 'Data/Utilisateurs.json', messageFilename : 'Data/Message.json'}
+            return {...params, carsFilename : 'Data/Cars.json'}
         }
     })
     
