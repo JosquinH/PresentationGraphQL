@@ -6,11 +6,15 @@
 const { makeSchema,queryType } = require('nexus')
 const path = require('path')
 const Cars = require('./Cars')
+const PersonalCars = require('./PersonalCars')
+const Garages = require('./Garages')
   
 
 const nexusSchema = makeSchema({
   types: [
-    ...Object.values(Cars)
+    ...Object.values(Cars),
+    ...Object.values(Garages),
+    ...Object.values(PersonalCars)
   ],
 
   outputs: {

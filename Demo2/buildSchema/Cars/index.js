@@ -64,7 +64,7 @@ const GetCarsQuery = queryField('getCars',{
 
 const CreateCarMutation = mutationField('createCar',{
     type: Car,
-    description: `Créé une Car`,
+    description: `Créer une Voiture`,
     args: { input: arg({type : nonNull(CreateCarInput)}) },
     resolve: resolvers.createCar
 })

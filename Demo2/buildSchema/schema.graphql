@@ -49,6 +49,21 @@ input CreateCarInput {
   year: Int!
 }
 
+"""Un garage de voitures personnelles"""
+input CreateGarageInput {
+  """La liste des plaques d'imatriculation des voiturees personnelles"""
+  personnalCarNumberPlates: [ID!]!
+}
+
+"""Input de création de voiture personnelle"""
+input CreatePersonalCarInput {
+  """L'ID de la voiture"""
+  carId: ID!
+
+  """La plaque d'imatriculation de la voiture"""
+  numberPlate: ID!
+}
+
 """Input pour filtrer les Car"""
 input FilterCarInput {
   """La marque de la voiture"""
@@ -67,9 +82,32 @@ input FilterCarInput {
   year: Int
 }
 
+"""Un garage de voitures personnelles"""
+type Garage {
+  id: ID!
+
+  """La liste des voiturees personnelles"""
+  personnalCars: [PersonalCar!]!
+}
+
 type Mutation {
-  """Créé une Car"""
+  """Créer une Voiture"""
   createCar(input: CreateCarInput!): Car
+
+  """Créer un garage"""
+  createGarage(input: CreateGarageInput!): Garage
+
+  """Créer une voiture personnelle"""
+  createPersonalCar(input: CreatePersonalCarInput!): PersonalCar
+}
+
+"""Une voiture personnelle"""
+type PersonalCar {
+  """La voiture"""
+  car: Car!
+
+  """La plaque d'imatriculation de la voiture"""
+  numberPlate: ID!
 }
 
 type Query {
@@ -78,4 +116,10 @@ type Query {
 
   """Renvoie une liste de Cars"""
   getCars(filter: FilterCarInput): [Car]
+
+  """Renvoie une liste de Garages"""
+  getGarages: [Garage]
+
+  """Renvoie une liste de voitures personnelles"""
+  getPersonalCars: [PersonalCar]
 }

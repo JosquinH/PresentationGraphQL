@@ -10,7 +10,7 @@ const getApolloServer = async () => {
         tracing: true,
         cacheControl: true,
         context: (...params) => {
-            return {...params, carsFilename : 'Data/Cars.json'}
+            return {...params, carsFilename : 'Data/Cars.json', personalCarsFilename : 'Data/PersonalCars.json', garagesFilename: 'Data/Garages.json' }
         }
     })
     
